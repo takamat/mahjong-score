@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build": "tsc -p .",
+    "build": "rm -rf lib && tsc -p .",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "lint": "eslint 'src/**/*.{js,ts}' --quiet --fix"
+    "lint": "eslint 'src/**/*.{js,ts}'"
   },
   "files": [
     "lib"
@@ -23,7 +23,11 @@
     "url": "https://github.com/takamat/mahjong-score/issues"
   },
   "homepage": "https://github.com/takamat/mahjong-score#readme",
+  "dependencies": {
+    "lodash.groupby": "^4.6.0"
+  },
   "devDependencies": {
+    "@types/lodash.groupby": "^4.6.6",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
@@ -49,7 +53,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,ts}": [
-      "eslint --fix",
+      "eslint",
       "git add"
     ]
   }

@@ -1,37 +1,38 @@
-declare enum Tile {
-    Man1 = "man1",
-    Man2 = "man2",
-    Man3 = "man3",
-    Man4 = "man4",
-    Man5 = "man5",
-    Man6 = "man6",
-    Man7 = "man7",
-    Man8 = "man8",
-    Man9 = "man9",
-    Pin1 = "pin1",
-    Pin2 = "pin2",
-    Pin3 = "pin3",
-    Pin4 = "pin4",
-    Pin5 = "pin5",
-    Pin6 = "pin6",
-    Pin7 = "pin7",
-    Pin8 = "pin8",
-    Pin9 = "pin9",
-    Sou1 = "sou1",
-    Sou2 = "sou2",
-    Sou3 = "sou3",
-    Sou4 = "sou4",
-    Sou5 = "sou5",
-    Sou6 = "sou6",
-    Sou7 = "sou7",
-    Sou8 = "sou8",
-    Sou9 = "sou9",
-    Ton = "ton",
-    Nan = "nan",
-    Sha = "sha",
-    Pei = "pei",
-    Haku = "haku",
-    Hatsu = "hatsu",
-    Chun = "chun"
-}
+declare const Tile: {
+    Man1: string;
+    Man2: string;
+    Man3: string;
+    Man4: string;
+    Man5: string;
+    Man6: string;
+    Man7: string;
+    Man8: string;
+    Man9: string;
+    Pin1: string;
+    Pin2: string;
+    Pin3: string;
+    Pin4: string;
+    Pin5: string;
+    Pin6: string;
+    Pin7: string;
+    Pin8: string;
+    Pin9: string;
+    Sou1: string;
+    Sou2: string;
+    Sou3: string;
+    Sou4: string;
+    Sou5: string;
+    Sou6: string;
+    Sou7: string;
+    Sou8: string;
+    Sou9: string;
+    Ton: string;
+    Nan: string;
+    Sha: string;
+    Pei: string;
+    Haku: string;
+    Hatsu: string;
+    Chun: string;
+};
+declare type Tile = typeof Tile[keyof typeof Tile];
 export default Tile;

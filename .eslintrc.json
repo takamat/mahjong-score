@@ -11,6 +11,6 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "interface-over-type-literal": "off"
+    "@typescript-eslint/consistent-type-definitions": "off"
   }
 }

@@ -1,4 +1,5 @@
 import Yaku from '../yaku'
+import Tile from './../../constants/tile'
 
 class YakuhaiNorth extends Yaku {
   hanOpen = 1
@@ -8,7 +9,10 @@ class YakuhaiNorth extends Yaku {
   englishName = 'yakuhai (north)'
 
   isConditionMet(): boolean {
-    return false
+    return Object.prototype.hasOwnProperty.call(
+      this.hand.koutsuKantsuGroups,
+      Tile.Pei,
+    )
   }
 }
 

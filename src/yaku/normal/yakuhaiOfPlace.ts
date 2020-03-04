@@ -8,7 +8,10 @@ class YakuhaiOfPlace extends Yaku {
   englishName = 'yakuhai (wind of place)'
 
   isConditionMet(): boolean {
-    return false
+    return Object.prototype.hasOwnProperty.call(
+      this.hand.koutsuKantsuGroups,
+      this.handConfig.baKaze,
+    )
   }
 }
 

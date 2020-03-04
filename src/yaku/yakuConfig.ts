@@ -1,5 +1,5 @@
-import { Tiles34Type } from './../types/tilesType'
 import HandConfigType from './../types/handConfigType'
+import Hand from './../hand/hand'
 import Yaku from './yaku'
 
 import AkaDora from './normal/akaDora'
@@ -106,7 +106,7 @@ class YakuConfig {
   tenhou: Yaku
   tsuuiisou: Yaku
 
-  constructor(tiles: Tiles34Type, handConfig: HandConfigType) {
+  constructor(tiles: Hand, handConfig: HandConfigType) {
     this.akaDora = new AkaDora(tiles, handConfig)
     this.chankan = new Chankan(tiles, handConfig)
     this.chanta = new Chanta(tiles, handConfig)

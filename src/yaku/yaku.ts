@@ -1,22 +1,22 @@
-import { Tiles34Type } from './../types/tilesType'
 import HandConfigType from './../types/handConfigType'
+import Hand from './../hand/hand'
 
 abstract class Yaku {
-  private readonly tiles: Tiles34Type
-  private readonly handConfig: HandConfigType
+  protected hand: Hand
+  protected handConfig: HandConfigType
   abstract hanOpen: number | null
   abstract hanClose: number | null
   abstract isYakuman: boolean
   abstract name: string
   abstract englishName: string
 
-  constructor(tiles: Tiles34Type, handConfig: HandConfigType) {
-    this.tiles = tiles
+  constructor(hand: Hand, handConfig: HandConfigType) {
+    this.hand = hand
     this.handConfig = handConfig
   }
 
   getHan(): number {
-    const han = this.handConfig.isCloseHand ? this.hanClose : this.hanOpen
+    const han = this.hand.isCloseHand ? this.hanClose : this.hanOpen
     return han ?? 0
   }
 

@@ -1,22 +1,31 @@
 import Tile from './constants/tile'
-import handCalculator from './handCalculator'
+import Hand from './hand/hand'
+import handCalculator from './hand/handCalculator'
 
-const tiles = {
-  man: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  pin: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  sou: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  kaze: [0, 0, 0, 0],
-  sangen: [0, 0, 0],
-}
+const tiles = [
+  { tile: Tile.Man1 },
+  { tile: Tile.Man1 },
+  { tile: Tile.Man1 },
+  { tile: Tile.Man4 },
+  { tile: Tile.Man5 },
+  { tile: Tile.Man6 },
+  { tile: Tile.Pin7 },
+  { tile: Tile.Pin7 },
+  { tile: Tile.Pin7, isOpen: true },
+  { tile: Tile.Sou1 },
+  { tile: Tile.Sou1 },
+  { tile: Tile.Chun },
+  { tile: Tile.Chun, isWinTile: true },
+  { tile: Tile.Chun },
+  { tile: Tile.Chun },
+]
 
 const handConfig = {
-  winTile: Tile.Chun,
   doraNumber: 0,
   akaDoraNumber: 0,
   uraDoraNumber: 0,
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
-  isCloseHand: true,
   isTsumo: true,
   isRiichi: true,
   isDoubleRiichi: false,
@@ -27,7 +36,8 @@ const handConfig = {
 
 // const ruleConfig = {}
 
-const result = handCalculator(tiles, handConfig)
+const hand = new Hand(tiles)
+const result = handCalculator(hand, handConfig)
 
 console.log('score', result.score)
 console.log('yaku', result.yaku)
