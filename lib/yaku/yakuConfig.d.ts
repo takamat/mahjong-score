@@ -1,5 +1,5 @@
-import { Tiles34Type } from './../types/tilesType';
 import HandConfigType from './../types/handConfigType';
+import Hand from './../hand/hand';
 import Yaku from './yaku';
 declare class YakuConfig {
     akaDora: Yaku;
@@ -52,6 +52,6 @@ declare class YakuConfig {
     suuKantsu: Yaku;
     tenhou: Yaku;
     tsuuiisou: Yaku;
-    constructor(tiles: Tiles34Type, handConfig: HandConfigType);
+    constructor(tiles: Hand, handConfig: HandConfigType);
 }
 export default YakuConfig;

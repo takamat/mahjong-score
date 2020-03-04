@@ -8,7 +8,10 @@ class YakuhaiOfRound extends Yaku {
   englishName = 'yakuhai (wind of round)'
 
   isConditionMet(): boolean {
-    return false
+    return Object.prototype.hasOwnProperty.call(
+      this.hand.koutsuKantsuGroups,
+      this.handConfig.jiKaze,
+    )
   }
 }
 

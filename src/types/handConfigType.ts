@@ -1,13 +1,11 @@
 import Tile from './../constants/tile'
 
-interface HandConfigType {
-  winTile: Tile
+type HandConfigType = {
   doraNumber: number
   akaDoraNumber: number
   uraDoraNumber: number
   baKaze: Tile
   jiKaze: Tile
-  isCloseHand: boolean
   isTsumo: boolean
   isRiichi: boolean
   isDoubleRiichi: boolean
