@@ -7,8 +7,14 @@ class Dora extends Yaku {
   name = 'ドラ'
   englishName = 'dora'
 
+  getHan(): number {
+    return this.hand.isCloseHand
+      ? this.hanClose * this.handConfig.doraNumber
+      : 0
+  }
+
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.doraNumber > 0
   }
 }
 

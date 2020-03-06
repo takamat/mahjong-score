@@ -21,9 +21,9 @@ const tiles = [
 ]
 
 const handConfig = {
-  doraNumber: 0,
-  akaDoraNumber: 0,
-  uraDoraNumber: 0,
+  doraNumber: 3,
+  akaDoraNumber: 2,
+  uraDoraNumber: 1,
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
   isTsumo: true,
