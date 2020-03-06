@@ -8,7 +8,7 @@ class Chankan extends Yaku {
   englishName = 'chankan'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isChankan
   }
 }
 

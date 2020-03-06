@@ -8,7 +8,7 @@ class Riichi extends Yaku {
   englishName = 'riichi'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isRiichi
   }
 }
 
