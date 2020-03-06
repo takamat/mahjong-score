@@ -7,8 +7,14 @@ class UraDora extends Yaku {
   name = '裏ドラ'
   englishName = 'ura dora'
 
+  getHan(): number {
+    return this.hand.isCloseHand
+      ? this.hanClose * this.handConfig.uraDoraNumber
+      : 0
+  }
+
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.uraDoraNumber > 0
   }
 }
 

@@ -19,10 +19,20 @@ const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
     console.error('No win tile specified')
   }
 
-  // if (config.akaDora.isConditionMet()) {
-  //   handYaku.push(config.akaDora.name)
-  //   score.han += config.akaDora.getHan()
-  // }
+  if (config.dora.isConditionMet()) {
+    handYaku.push(config.dora.name)
+    score.han += config.dora.getHan()
+  }
+
+  if (config.akaDora.isConditionMet()) {
+    handYaku.push(config.akaDora.name)
+    score.han += config.akaDora.getHan()
+  }
+
+  if (config.uraDora.isConditionMet()) {
+    handYaku.push(config.uraDora.name)
+    score.han += config.uraDora.getHan()
+  }
 
   if (config.yakuhaiOfPlace.isConditionMet()) {
     handYaku.push(config.yakuhaiOfPlace.name)
