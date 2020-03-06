@@ -8,7 +8,7 @@ class Tsumo extends Yaku {
   englishName = 'menzenchin tsumohou'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isTsumo
   }
 }
 

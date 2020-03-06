@@ -8,7 +8,7 @@ class Houtei extends Yaku {
   englishName = 'houtei raoyui'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isHoutei
   }
 }
 

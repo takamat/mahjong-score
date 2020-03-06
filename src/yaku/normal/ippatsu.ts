@@ -8,7 +8,7 @@ class Ippatsu extends Yaku {
   englishName = 'ippatsu'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isIppatsu
   }
 }
 

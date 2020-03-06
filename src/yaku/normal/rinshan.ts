@@ -8,7 +8,7 @@ class Rinshan extends Yaku {
   englishName = 'rinshan kaihou'
 
   isConditionMet(): boolean {
-    return false
+    return this.handConfig.isRinshankaihoh
   }
 }
 

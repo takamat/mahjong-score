@@ -12,6 +12,8 @@ type HandConfigType = {
   isIppatsu: boolean
   isChankan: boolean
   isRinshankaihoh: boolean
+  isHaitei: boolean
+  isHoutei: boolean
 }
 
 export default HandConfigType

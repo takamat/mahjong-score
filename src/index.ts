@@ -21,9 +21,9 @@ const tiles = [
 ]
 
 const handConfig = {
-  doraNumber: 3,
-  akaDoraNumber: 2,
-  uraDoraNumber: 1,
+  doraNumber: 1,
+  akaDoraNumber: 0,
+  uraDoraNumber: 0,
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
   isTsumo: true,
@@ -32,6 +32,8 @@ const handConfig = {
   isIppatsu: true,
   isChankan: false,
   isRinshankaihoh: false,
+  isHaitei: false,
+  isHoutei: false,
 }
 
 // const ruleConfig = {}
