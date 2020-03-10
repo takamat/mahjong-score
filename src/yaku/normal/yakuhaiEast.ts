@@ -11,7 +11,7 @@ class YakuhaiEast extends Yaku {
   isConditionMet(): boolean {
     return Object.prototype.hasOwnProperty.call(
       this.hand.koutsuKantsuGroups,
-      Tile.Nan,
+      Tile.Ton,
     )
   }
 }
