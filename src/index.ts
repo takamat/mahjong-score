@@ -1,46 +1,48 @@
 import Tile from './constants/tile'
 import Hand from './hand/hand'
 import handCalculator from './hand/handCalculator'
+import { TileGroupType } from './types/tileType'
+import { Result } from './types/resultType'
 
-const tiles = [
-  { tile: Tile.Man1 },
-  { tile: Tile.Man1 },
-  { tile: Tile.Man1 },
-  { tile: Tile.Man4 },
-  { tile: Tile.Man5 },
-  { tile: Tile.Man6 },
-  { tile: Tile.Pin7 },
-  { tile: Tile.Pin7 },
-  { tile: Tile.Pin7, isOpen: true },
-  { tile: Tile.Sou1 },
-  { tile: Tile.Sou1 },
-  { tile: Tile.Chun },
-  { tile: Tile.Chun, isWinTile: true },
-  { tile: Tile.Chun },
-  { tile: Tile.Chun },
-]
-
-const handConfig = {
-  doraNumber: 1,
-  akaDoraNumber: 0,
-  uraDoraNumber: 0,
-  baKaze: Tile.Ton,
-  jiKaze: Tile.Nan,
-  isTsumo: true,
-  isRiichi: true,
-  isDoubleRiichi: false,
-  isIppatsu: true,
-  isChankan: false,
-  isRinshankaihoh: false,
-  isHaitei: false,
-  isHoutei: false,
+type handOptionsType = {
+  doraNumber?: number
+  akaDoraNumber?: number
+  uraDoraNumber?: number
+  baKaze: Tile
+  jiKaze: Tile
+  isTsumo?: boolean
+  isRiichi?: boolean
+  isDoubleRiichi?: boolean
+  isIppatsu?: boolean
+  isChankan?: boolean
+  isRinshankaihoh?: boolean
+  isHaitei?: boolean
+  isHoutei?: boolean
 }
 
-// const ruleConfig = {}
+const mahjongScore = (
+  tiles: TileGroupType,
+  handOptions: handOptionsType,
+): Result => {
+  const handConfig = Object.assign(
+    {
+      doraNumber: 0,
+      akaDoraNumber: 0,
+      uraDoraNumber: 0,
+      isTsumo: false,
+      isRiichi: false,
+      isDoubleRiichi: false,
+      isIppatsu: false,
+      isChankan: false,
+      isRinshankaihoh: false,
+      isHaitei: false,
+      isHoutei: false,
+    },
+    handOptions,
+  )
+  const hand = new Hand(tiles)
 
-const hand = new Hand(tiles)
-const result = handCalculator(hand, handConfig)
+  return handCalculator(hand, handConfig)
+}
 
-console.log('score', result.score)
-console.log('yaku', result.yaku)
-console.log('fu', result.fuDetails)
+export default mahjongScore

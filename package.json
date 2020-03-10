@@ -1,21 +1,19 @@
 {
   "name": "mahjong-score",
   "version": "0.1.0",
-  "description": "",
+  "description": "Riichi mahjong score calculator",
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build": "rm -rf lib && tsc -p .",
+    "build": "rm -rf lib && tsc -b .",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "lint": "eslint 'src/**/*.{js,ts}'"
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "test": "jest"
   },
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/takamat/mahjong-score.git"
-  },
+  "repository": "git+https://github.com/takamat/mahjong-score.git",
   "keywords": [],
   "author": "takamat",
   "license": "MIT",
@@ -27,6 +25,7 @@
     "lodash.groupby": "^4.6.0"
   },
   "devDependencies": {
+    "@types/jest": "^25.1.4",
     "@types/lodash.groupby": "^4.6.6",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
@@ -40,9 +39,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.2",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   },

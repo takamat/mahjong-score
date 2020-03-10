@@ -1,3 +1,4 @@
+import Tile from '../constants/tile'
 import HandConfigType from '../types/handConfigType'
 import { FuDetail, Result } from '../types/resultType'
 import Hand from './../hand/hand'
@@ -9,16 +10,22 @@ const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
   const handYaku: string[] = []
   const fuDetails: FuDetail[] = []
 
-  // if (tiles.length !== 14) {
-  //   console.error('Incorrect number of tiles')
-  //   return { score: null, yaku: null, fuDetails: null }
-  // }
+  // invalid parameter
+  const kazehaiList = [Tile.Ton, Tile.Nan, Tile.Sha, Tile.Pei]
+  if (!kazehaiList.includes(handConfig.baKaze)) {
+    console.error('Bakaze is unspecified')
+  }
+
+  if (!kazehaiList.includes(handConfig.jiKaze)) {
+    console.error('JiKaze is unspecified')
+  }
 
   const winTileNumber = hand.tiles.filter(tile => tile.isWinTile).length
   if (winTileNumber !== 1) {
     console.error('No win tile specified')
   }
 
+  // yaku
   if (config.riichi.isConditionMet()) {
     handYaku.push(config.riichi.name)
     score.han += config.riichi.getHan()
