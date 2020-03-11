@@ -22,7 +22,7 @@ const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
 
   const winTileNumber = hand.tiles.filter(tile => tile.isWinTile).length
   if (winTileNumber !== 1) {
-    console.error('No win tile specified')
+    console.error('Win tile is unspecified')
   }
 
   // yaku
@@ -64,6 +64,11 @@ const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
   if (config.houtei.isConditionMet()) {
     handYaku.push(config.houtei.name)
     score.han += config.houtei.getHan()
+  }
+
+  if (config.chiitoitsu.isConditionMet()) {
+    handYaku.push(config.chiitoitsu.name)
+    score.han += config.chiitoitsu.getHan()
   }
 
   if (config.dora.isConditionMet()) {

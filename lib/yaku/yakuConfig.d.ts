@@ -5,7 +5,7 @@ declare class YakuConfig {
     akaDora: Yaku;
     chankan: Yaku;
     chanta: Yaku;
-    Chiitoitsu: Yaku;
+    chiitoitsu: Yaku;
     chinitsu: Yaku;
     dora: Yaku;
     doubleRiichi: Yaku;
