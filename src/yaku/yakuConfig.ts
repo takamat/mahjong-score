@@ -58,7 +58,7 @@ class YakuConfig {
   akaDora: Yaku
   chankan: Yaku
   chanta: Yaku
-  Chiitoitsu: Yaku
+  chiitoitsu: Yaku
   chinitsu: Yaku
   dora: Yaku
   doubleRiichi: Yaku
@@ -110,7 +110,7 @@ class YakuConfig {
     this.akaDora = new AkaDora(tiles, handConfig)
     this.chankan = new Chankan(tiles, handConfig)
     this.chanta = new Chanta(tiles, handConfig)
-    this.Chiitoitsu = new Chiitoitsu(tiles, handConfig)
+    this.chiitoitsu = new Chiitoitsu(tiles, handConfig)
     this.chinitsu = new Chinitsu(tiles, handConfig)
     this.dora = new Dora(tiles, handConfig)
     this.doubleRiichi = new DoubleRiichi(tiles, handConfig)
