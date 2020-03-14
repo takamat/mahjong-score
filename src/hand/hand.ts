@@ -50,17 +50,6 @@ class Hand {
       if (groups[tileName].length === 2) {
         this.toitsuGroups[tileName] = groups[tileName]
       }
-
-      if (groups[tileName].length === 4) {
-        this.toitsuGroups[`${tileName}A`] = [
-          groups[tileName][0],
-          groups[tileName][1],
-        ]
-        this.toitsuGroups[`${tileName}B`] = [
-          groups[tileName][2],
-          groups[tileName][3],
-        ]
-      }
     })
   }
 }

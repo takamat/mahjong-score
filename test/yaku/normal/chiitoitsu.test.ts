@@ -45,5 +45,5 @@ test('test is chiitoitsu (kantsu)', () => {
     { tile: Tile.Ton },
   ]
   const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('七対子')
+  expect(result.yaku).not.toContain('七対子')
 })
