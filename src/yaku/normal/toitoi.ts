@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Toitoi extends Yaku {
+export class Toitoi extends Yaku {
   hanOpen = 2
   hanClose = 2
   isYakuman = false
@@ -11,5 +11,3 @@ class Toitoi extends Yaku {
     return false
   }
 }
-
-export default Toitoi

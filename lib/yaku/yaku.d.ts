@@ -1,6 +1,6 @@
-import HandConfigType from './../types/handConfigType';
-import Hand from './../hand/hand';
-declare abstract class Yaku {
+import { HandConfigType } from './../types/handConfigType';
+import { Hand } from './../hand/hand';
+export declare abstract class Yaku {
     protected hand: Hand;
     protected handConfig: HandConfigType;
     abstract hanOpen: number | null;
@@ -12,4 +12,3 @@ declare abstract class Yaku {
     getHan(): number;
     abstract isConditionMet(): boolean;
 }
-export default Yaku;

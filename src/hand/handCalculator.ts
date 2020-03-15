@@ -1,10 +1,13 @@
-import Tile from '../constants/tile'
-import HandConfigType from '../types/handConfigType'
+import { Tile } from '../constants/tile'
+import { HandConfigType } from '../types/handConfigType'
 import { FuDetail, Result } from '../types/resultType'
-import Hand from './../hand/hand'
-import YakuConfig from '../yaku/yakuConfig'
+import { Hand } from './../hand/hand'
+import { YakuConfig } from '../yaku/yakuConfig'
 
-const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
+export const handCalculator = (
+  hand: Hand,
+  handConfig: HandConfigType,
+): Result => {
   const config = new YakuConfig(hand, handConfig)
   const score = { han: 0, fu: 0, points: 0 }
   const handYaku: string[] = []
@@ -133,5 +136,3 @@ const handCalculator = (hand: Hand, handConfig: HandConfigType): Result => {
 
   return { score, yaku: handYaku, fuDetails }
 }
-
-export default handCalculator

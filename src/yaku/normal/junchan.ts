@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Junchan extends Yaku {
+export class Junchan extends Yaku {
   hanOpen = 1
   hanClose = 2
   isYakuman = false
@@ -11,5 +11,3 @@ class Junchan extends Yaku {
     return false
   }
 }
-
-export default Junchan

@@ -1,4 +1,4 @@
-import Tile from '../constants/tile'
+import { Tile } from '../constants/tile'
 
 export type TileType = {
   tile: Tile

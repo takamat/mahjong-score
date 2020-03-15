@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Sanshoku extends Yaku {
+export class Sanshoku extends Yaku {
   hanOpen = 1
   hanClose = 2
   isYakuman = false
@@ -11,5 +11,3 @@ class Sanshoku extends Yaku {
     return false
   }
 }
-
-export default Sanshoku

@@ -1,7 +1,7 @@
-import HandConfigType from './../types/handConfigType'
-import Hand from './../hand/hand'
+import { HandConfigType } from './../types/handConfigType'
+import { Hand } from './../hand/hand'
 
-abstract class Yaku {
+export abstract class Yaku {
   protected hand: Hand
   protected handConfig: HandConfigType
   abstract hanOpen: number | null
@@ -22,5 +22,3 @@ abstract class Yaku {
 
   abstract isConditionMet(): boolean
 }
-
-export default Yaku

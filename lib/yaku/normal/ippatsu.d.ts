@@ -1,5 +1,5 @@
-import Yaku from '../yaku';
-declare class Ippatsu extends Yaku {
+import { Yaku } from '../yaku';
+export declare class Ippatsu extends Yaku {
     hanOpen: null;
     hanClose: number;
     isYakuman: boolean;
@@ -7,4 +7,3 @@ declare class Ippatsu extends Yaku {
     englishName: string;
     isConditionMet(): boolean;
 }
-export default Ippatsu;

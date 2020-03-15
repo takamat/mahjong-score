@@ -1,4 +1,4 @@
-import Tile from './constants/tile';
+import { Tile } from './constants/tile';
 import { TileGroupType } from './types/tileType';
 import { Result } from './types/resultType';
 declare type handOptionsType = {

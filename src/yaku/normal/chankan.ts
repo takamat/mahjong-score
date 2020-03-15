@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Chankan extends Yaku {
+export class Chankan extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Chankan extends Yaku {
     return this.handConfig.isChankan
   }
 }
-
-export default Chankan

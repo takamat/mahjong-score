@@ -1,5 +1,5 @@
-import Yaku from './../yaku';
-declare class SuuKantsu extends Yaku {
+import { Yaku } from './../yaku';
+export declare class SuuKantsu extends Yaku {
     hanOpen: null;
     hanClose: null;
     isYakuman: boolean;
@@ -7,4 +7,3 @@ declare class SuuKantsu extends Yaku {
     englishName: string;
     isConditionMet(): boolean;
 }
-export default SuuKantsu;

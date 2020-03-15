@@ -1,6 +1,6 @@
-import Yaku from './../yaku'
+import { Yaku } from './../yaku'
 
-class Tenhou extends Yaku {
+export class Tenhou extends Yaku {
   hanOpen = null
   hanClose = null
   isYakuman = true
@@ -11,5 +11,3 @@ class Tenhou extends Yaku {
     return false
   }
 }
-
-export default Tenhou

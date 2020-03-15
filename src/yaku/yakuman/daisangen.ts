@@ -1,6 +1,6 @@
-import Yaku from './../yaku'
+import { Yaku } from './../yaku'
 
-class Daisangen extends Yaku {
+export class Daisangen extends Yaku {
   hanOpen = null
   hanClose = null
   isYakuman = true
@@ -11,5 +11,3 @@ class Daisangen extends Yaku {
     return false
   }
 }
-
-export default Daisangen

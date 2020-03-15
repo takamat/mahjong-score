@@ -1,7 +1,7 @@
-import HandConfigType from './../types/handConfigType';
-import Hand from './../hand/hand';
-import Yaku from './yaku';
-declare class YakuConfig {
+import { HandConfigType } from './../types/handConfigType';
+import { Hand } from './../hand/hand';
+import { Yaku } from './yaku';
+export declare class YakuConfig {
     akaDora: Yaku;
     chankan: Yaku;
     chanta: Yaku;
@@ -54,4 +54,3 @@ declare class YakuConfig {
     tsuuiisou: Yaku;
     constructor(tiles: Hand, handConfig: HandConfigType);
 }
-export default YakuConfig;

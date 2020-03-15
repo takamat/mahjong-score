@@ -1,7 +1,7 @@
-import Yaku from '../yaku'
-import Tile from './../../constants/tile'
+import { Yaku } from '../yaku'
+import { Tile } from './../../constants/tile'
 
-class YakuhaiHatsu extends Yaku {
+export class YakuhaiHatsu extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -15,5 +15,3 @@ class YakuhaiHatsu extends Yaku {
     )
   }
 }
-
-export default YakuhaiHatsu

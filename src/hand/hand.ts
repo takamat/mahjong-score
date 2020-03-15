@@ -1,7 +1,7 @@
 import groupBy from 'lodash.groupby'
 import { TileType, TileGroupType, TileGroupObjectType } from '../types/tileType'
 
-class Hand {
+export class Hand {
   tiles: TileType[]
   isCloseHand: boolean
   shuntsuGroups: TileGroupType[] = []
@@ -53,5 +53,3 @@ class Hand {
     })
   }
 }
-
-export default Hand
