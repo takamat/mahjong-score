@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Houtei extends Yaku {
+export class Houtei extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Houtei extends Yaku {
     return this.handConfig.isHoutei
   }
 }
-
-export default Houtei

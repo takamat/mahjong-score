@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Chiitoitsu extends Yaku {
+export class Chiitoitsu extends Yaku {
   hanOpen = null
   hanClose = 2
   isYakuman = false
@@ -11,5 +11,3 @@ class Chiitoitsu extends Yaku {
     return Object.keys(this.hand.toitsuGroups).length === 7
   }
 }
-
-export default Chiitoitsu

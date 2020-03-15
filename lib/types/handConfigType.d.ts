@@ -1,5 +1,5 @@
-import Tile from './../constants/tile';
-declare type HandConfigType = {
+import { Tile } from './../constants/tile';
+export declare type HandConfigType = {
     doraNumber: number;
     akaDoraNumber: number;
     uraDoraNumber: number;
@@ -14,4 +14,3 @@ declare type HandConfigType = {
     isHaitei: boolean;
     isHoutei: boolean;
 };
-export default HandConfigType;

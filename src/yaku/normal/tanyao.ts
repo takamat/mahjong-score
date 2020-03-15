@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Tanyao extends Yaku {
+export class Tanyao extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Tanyao extends Yaku {
     return false
   }
 }
-
-export default Tanyao

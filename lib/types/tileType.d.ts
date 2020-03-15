@@ -1,4 +1,4 @@
-import Tile from '../constants/tile';
+import { Tile } from '../constants/tile';
 export declare type TileType = {
     tile: Tile;
     isOpen?: boolean;

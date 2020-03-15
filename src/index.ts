@@ -1,6 +1,6 @@
-import Tile from './constants/tile'
-import Hand from './hand/hand'
-import handCalculator from './hand/handCalculator'
+import { Tile } from './constants/tile'
+import { Hand } from './hand/hand'
+import { handCalculator } from './hand/handCalculator'
 import { TileGroupType } from './types/tileType'
 import { Result } from './types/resultType'
 

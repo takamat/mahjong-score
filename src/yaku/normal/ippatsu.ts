@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Ippatsu extends Yaku {
+export class Ippatsu extends Yaku {
   hanOpen = null
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Ippatsu extends Yaku {
     return this.handConfig.isIppatsu
   }
 }
-
-export default Ippatsu

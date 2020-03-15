@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Tsumo extends Yaku {
+export class Tsumo extends Yaku {
   hanOpen = null
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Tsumo extends Yaku {
     return this.handConfig.isTsumo
   }
 }
-
-export default Tsumo

@@ -1,5 +1,5 @@
-import Yaku from '../yaku';
-declare class UraDora extends Yaku {
+import { Yaku } from '../yaku';
+export declare class UraDora extends Yaku {
     hanOpen: null;
     hanClose: number;
     isYakuman: boolean;
@@ -8,4 +8,3 @@ declare class UraDora extends Yaku {
     getHan(): number;
     isConditionMet(): boolean;
 }
-export default UraDora;

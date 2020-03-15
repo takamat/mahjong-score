@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Chinitsu extends Yaku {
+export class Chinitsu extends Yaku {
   hanOpen = 5
   hanClose = 6
   isYakuman = false
@@ -11,5 +11,3 @@ class Chinitsu extends Yaku {
     return false
   }
 }
-
-export default Chinitsu

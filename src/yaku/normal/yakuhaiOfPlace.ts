@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class YakuhaiOfPlace extends Yaku {
+export class YakuhaiOfPlace extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -14,5 +14,3 @@ class YakuhaiOfPlace extends Yaku {
     )
   }
 }
-
-export default YakuhaiOfPlace

@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Ittsuu extends Yaku {
+export class Ittsuu extends Yaku {
   hanOpen = 1
   hanClose = 2
   isYakuman = false
@@ -11,5 +11,3 @@ class Ittsuu extends Yaku {
     return false
   }
 }
-
-export default Ittsuu

@@ -1,5 +1,5 @@
 import { TileType, TileGroupType, TileGroupObjectType } from '../types/tileType';
-declare class Hand {
+export declare class Hand {
     tiles: TileType[];
     isCloseHand: boolean;
     shuntsuGroups: TileGroupType[];
@@ -12,4 +12,3 @@ declare class Hand {
     private getKantsuGroups;
     private getToitsuGroups;
 }
-export default Hand;

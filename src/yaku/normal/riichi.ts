@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Riichi extends Yaku {
+export class Riichi extends Yaku {
   hanOpen = null
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Riichi extends Yaku {
     return this.handConfig.isRiichi
   }
 }
-
-export default Riichi

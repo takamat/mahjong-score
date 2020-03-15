@@ -1,4 +1,4 @@
-const Tile = {
+export const Tile = {
   Man1: 'man1',
   Man2: 'man2',
   Man3: 'man3',
@@ -39,6 +39,4 @@ const Tile = {
   Chun: 'chun',
 }
 
-type Tile = typeof Tile[keyof typeof Tile]
-
-export default Tile
+export type Tile = typeof Tile[keyof typeof Tile]

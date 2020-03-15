@@ -1,4 +1,4 @@
-declare const Tile: {
+export declare const Tile: {
     Man1: string;
     Man2: string;
     Man3: string;
@@ -34,5 +34,4 @@ declare const Tile: {
     Hatsu: string;
     Chun: string;
 };
-declare type Tile = typeof Tile[keyof typeof Tile];
-export default Tile;
+export declare type Tile = typeof Tile[keyof typeof Tile];

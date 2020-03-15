@@ -1,6 +1,6 @@
-import Yaku from './../yaku'
+import { Yaku } from './../yaku'
 
-class Chinroutou extends Yaku {
+export class Chinroutou extends Yaku {
   hanOpen = null
   hanClose = null
   isYakuman = true
@@ -11,5 +11,3 @@ class Chinroutou extends Yaku {
     return false
   }
 }
-
-export default Chinroutou

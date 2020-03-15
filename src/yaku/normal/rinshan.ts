@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Rinshan extends Yaku {
+export class Rinshan extends Yaku {
   hanOpen = 1
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Rinshan extends Yaku {
     return this.handConfig.isRinshankaihoh
   }
 }
-
-export default Rinshan

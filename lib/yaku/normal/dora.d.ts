@@ -1,5 +1,5 @@
-import Yaku from '../yaku';
-declare class Dora extends Yaku {
+import { Yaku } from '../yaku';
+export declare class Dora extends Yaku {
     hanOpen: null;
     hanClose: number;
     isYakuman: boolean;
@@ -8,4 +8,3 @@ declare class Dora extends Yaku {
     getHan(): number;
     isConditionMet(): boolean;
 }
-export default Dora;

@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class Pinfu extends Yaku {
+export class Pinfu extends Yaku {
   hanOpen = null
   hanClose = 1
   isYakuman = false
@@ -11,5 +11,3 @@ class Pinfu extends Yaku {
     return false
   }
 }
-
-export default Pinfu

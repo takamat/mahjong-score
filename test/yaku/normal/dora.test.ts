@@ -1,5 +1,5 @@
 import mahjongScore from '../../../src/index'
-import Tile from '../../../src/constants/tile'
+import { Tile } from '../../../src/constants/tile'
 
 const tiles = [
   { tile: Tile.Man1 },

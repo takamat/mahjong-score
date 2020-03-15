@@ -1,5 +1,5 @@
-import Yaku from '../yaku';
-declare class SanAnkou extends Yaku {
+import { Yaku } from '../yaku';
+export declare class SanAnkou extends Yaku {
     hanOpen: number;
     hanClose: number;
     isYakuman: boolean;
@@ -7,4 +7,3 @@ declare class SanAnkou extends Yaku {
     englishName: string;
     isConditionMet(): boolean;
 }
-export default SanAnkou;

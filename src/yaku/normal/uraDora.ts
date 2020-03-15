@@ -1,6 +1,6 @@
-import Yaku from '../yaku'
+import { Yaku } from '../yaku'
 
-class UraDora extends Yaku {
+export class UraDora extends Yaku {
   hanOpen = null
   hanClose = 1
   isYakuman = false
@@ -17,5 +17,3 @@ class UraDora extends Yaku {
     return this.handConfig.uraDoraNumber > 0
   }
 }
-
-export default UraDora
