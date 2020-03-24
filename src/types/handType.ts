@@ -1,4 +1,5 @@
-import { Tile } from './../constants/tile'
+import { Tile } from '../constants/tile'
+import { Suit } from './../constants/suit'
 
 export type HandConfigType = {
   doraNumber: number
@@ -14,4 +15,11 @@ export type HandConfigType = {
   isRinshankaihoh: boolean
   isHaitei: boolean
   isHoutei: boolean
+}
+
+export type MentsuType = {
+  tile?: Tile
+  suit: Suit
+  number: number | null
+  isOpen?: boolean
 }

@@ -1,4 +1,4 @@
-import { HandConfigType } from './../types/handConfigType'
+import { HandConfigType } from '../types/handType'
 import { Hand } from './../hand/hand'
 
 export abstract class Yaku {

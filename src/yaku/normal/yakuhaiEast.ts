@@ -9,9 +9,10 @@ export class YakuhaiEast extends Yaku {
   englishName = 'yakuhai (east)'
 
   isConditionMet(): boolean {
-    return Object.prototype.hasOwnProperty.call(
-      this.hand.koutsuKantsuGroups,
-      Tile.Ton,
+    return (
+      this.hand.koutsuKantsuList.findIndex(
+        mentsu => mentsu.tile === Tile.Ton,
+      ) >= 0
     )
   }
 }

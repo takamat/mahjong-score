@@ -1,5 +1,5 @@
 import { Tile } from '../constants/tile'
-import { HandConfigType } from '../types/handConfigType'
+import { HandConfigType } from '../types/handType'
 import { FuDetail, Result } from '../types/resultType'
 import { Hand } from './../hand/hand'
 import { YakuConfig } from '../yaku/yakuConfig'
@@ -69,9 +69,15 @@ export const handCalculator = (
     score.han += config.houtei.getHan()
   }
 
+  // TODO: WIP
   if (config.chiitoitsu.isConditionMet()) {
     handYaku.push(config.chiitoitsu.name)
     score.han += config.chiitoitsu.getHan()
+  }
+
+  if (config.ittsuu.isConditionMet()) {
+    handYaku.push(config.ittsuu.name)
+    score.han += config.ittsuu.getHan()
   }
 
   if (config.dora.isConditionMet()) {

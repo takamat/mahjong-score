@@ -6,6 +6,6 @@ export type TileType = {
   isWinTile?: boolean
 }
 
-export type TileGroupType = TileType[]
+export type TileListType = TileType[]
 
-export type TileGroupObjectType = { [P in Tile]: TileGroupType }
+export type TileListGroupType = { [P in Tile]: TileListType }

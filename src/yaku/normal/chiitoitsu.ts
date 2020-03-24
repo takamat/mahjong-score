@@ -8,6 +8,6 @@ export class Chiitoitsu extends Yaku {
   englishName = 'chiitoitsu'
 
   isConditionMet(): boolean {
-    return Object.keys(this.hand.toitsuGroups).length === 7
+    return Object.keys(this.hand.toitsuList).length === 7
   }
 }
