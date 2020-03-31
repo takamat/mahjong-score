@@ -55,7 +55,7 @@ const getSuit = (tile: Tile): Suit => {
 const getTileNumber = (tile: Tile): number | null => {
   const suit = getSuit(tile)
   if (suit === Suit.Man || suit === Suit.Pin || suit === Suit.Sou) {
-    tile.charAt(3)
+    return parseInt(tile.charAt(3), 10)
   }
   return null
 }
