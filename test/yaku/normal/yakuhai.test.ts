@@ -8,12 +8,12 @@ const handConfig = {
 
 test('test is yakuhai bakaze', () => {
   const tiles = [
-    { tile: Tile.Man1 },
-    { tile: Tile.Man1 },
-    { tile: Tile.Man1 },
     { tile: Tile.Man4 },
     { tile: Tile.Man5 },
     { tile: Tile.Man6 },
+    { tile: Tile.Man1 },
+    { tile: Tile.Man1 },
+    { tile: Tile.Man1 },
     { tile: Tile.Pin7 },
     { tile: Tile.Pin7 },
     { tile: Tile.Pin7 },

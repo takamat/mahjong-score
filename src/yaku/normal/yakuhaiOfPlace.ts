@@ -8,9 +8,10 @@ export class YakuhaiOfPlace extends Yaku {
   englishName = 'yakuhai (wind of place)'
 
   isConditionMet(): boolean {
-    return Object.prototype.hasOwnProperty.call(
-      this.hand.koutsuKantsuGroups,
-      this.handConfig.baKaze,
+    return (
+      this.hand.koutsuKantsuList.findIndex(
+        mentsu => mentsu.tile === this.handConfig.baKaze,
+      ) >= 0
     )
   }
 }

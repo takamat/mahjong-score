@@ -1,7 +1,7 @@
 import { Tile } from './constants/tile'
 import { Hand } from './hand/hand'
 import { handCalculator } from './hand/handCalculator'
-import { TileGroupType } from './types/tileType'
+import { TileListType } from './types/tileType'
 import { Result } from './types/resultType'
 
 type handOptionsType = {
@@ -21,7 +21,7 @@ type handOptionsType = {
 }
 
 const mahjongScore = (
-  tiles: TileGroupType,
+  tiles: TileListType,
   handOptions: handOptionsType,
 ): Result => {
   const handConfig = Object.assign(
