@@ -8,6 +8,10 @@ export class Toitoi extends Yaku {
   englishName = 'toitoihou'
 
   isConditionMet(): boolean {
+    if (this.hand.koutsuKantsuList.length >= 4) {
+      return true
+    }
+
     return false
   }
 }
