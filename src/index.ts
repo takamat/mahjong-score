@@ -1,6 +1,7 @@
 import { Tile } from './constants/tile'
 import { Hand } from './hand/hand'
-import { handCalculator } from './hand/handCalculator'
+import { judgeYaku } from './yaku/judgeYaku'
+import { calcScore } from './calcScore'
 import { TileListType } from './types/tileType'
 import { Result } from './types/resultType'
 
@@ -41,8 +42,9 @@ const mahjongScore = (
     handOptions,
   )
   const hand = new Hand(tiles)
+  const yakuList = judgeYaku(hand, handConfig)
 
-  return handCalculator(hand, handConfig)
+  return calcScore(yakuList, handConfig)
 }
 
 export default mahjongScore

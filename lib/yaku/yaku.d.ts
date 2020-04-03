@@ -1,4 +1,5 @@
 import { HandConfigType } from '../types/handType';
+import { YakuType } from '../types/yakuType';
 import { Hand } from './../hand/hand';
 export declare abstract class Yaku {
     protected hand: Hand;
@@ -10,5 +11,6 @@ export declare abstract class Yaku {
     abstract englishName: string;
     constructor(hand: Hand, handConfig: HandConfigType);
     getHan(): number;
+    getYakuData(): YakuType;
     abstract isConditionMet(): boolean;
 }
