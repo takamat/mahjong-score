@@ -21,5 +21,5 @@ export type MentsuType = {
   tile?: Tile
   suit: Suit
   number: number | null
-  isOpen?: boolean
+  isOpen: boolean
 }

@@ -8,6 +8,18 @@ export class SanAnkou extends Yaku {
   englishName = 'san ankou'
 
   isConditionMet(): boolean {
+    if (this.hand.koutsuKantsuList.length < 3) {
+      return false
+    }
+
+    const closedMentsuList = this.hand.koutsuKantsuList.filter(
+      mentsu => !mentsu.isOpen,
+    )
+
+    if (closedMentsuList.length >= 3) {
+      return true
+    }
+
     return false
   }
 }

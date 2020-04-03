@@ -4,7 +4,7 @@ export declare type TileType = {
     isOpen?: boolean;
     isWinTile?: boolean;
 };
-export declare type TileGroupType = TileType[];
-export declare type TileGroupObjectType = {
-    [P in Tile]: TileGroupType;
+export declare type TileListType = TileType[];
+export declare type TileListGroupType = {
+    [P in Tile]: TileListType;
 };

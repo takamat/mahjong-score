@@ -73,6 +73,7 @@ export const getToitsu = (toitsuTiles: TileListType): MentsuType => {
     tile: toitsuTiles[0].tile,
     suit: getSuit(toitsuTiles[0].tile),
     number: getTileNumber(toitsuTiles[0].tile),
+    isOpen: false,
   }
 }
 

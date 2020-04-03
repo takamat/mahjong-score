@@ -75,9 +75,84 @@ export const handCalculator = (
     score.han += config.chiitoitsu.getHan()
   }
 
+  if (config.tanyao.isConditionMet()) {
+    handYaku.push(config.tanyao.name)
+    score.han += config.tanyao.getHan()
+  }
+
+  if (config.pinfu.isConditionMet()) {
+    handYaku.push(config.pinfu.name)
+    score.han += config.pinfu.getHan()
+  }
+
+  if (config.iipeikou.isConditionMet()) {
+    handYaku.push(config.iipeikou.name)
+    score.han += config.iipeikou.getHan()
+  }
+
+  if (config.toitoi.isConditionMet()) {
+    handYaku.push(config.toitoi.name)
+    score.han += config.toitoi.getHan()
+  }
+
+  if (config.sanAnkou.isConditionMet()) {
+    handYaku.push(config.sanAnkou.name)
+    score.han += config.sanAnkou.getHan()
+  }
+
+  if (config.sanshokuDoukou.isConditionMet()) {
+    handYaku.push(config.sanshokuDoukou.name)
+    score.han += config.sanshokuDoukou.getHan()
+  }
+
+  if (config.sanshoku.isConditionMet()) {
+    handYaku.push(config.sanshoku.name)
+    score.han += config.sanshoku.getHan()
+  }
+
+  if (config.honroutou.isConditionMet()) {
+    handYaku.push(config.honroutou.name)
+    score.han += config.honroutou.getHan()
+  }
+
   if (config.ittsuu.isConditionMet()) {
     handYaku.push(config.ittsuu.name)
     score.han += config.ittsuu.getHan()
+  }
+
+  if (config.chanta.isConditionMet()) {
+    handYaku.push(config.chanta.name)
+    score.han += config.chanta.getHan()
+  }
+
+  if (config.shousangen.isConditionMet()) {
+    handYaku.push(config.shousangen.name)
+    score.han += config.shousangen.getHan()
+  }
+
+  if (config.sanKantsu.isConditionMet()) {
+    handYaku.push(config.sanKantsu.name)
+    score.han += config.sanKantsu.getHan()
+  }
+
+  if (config.honitsu.isConditionMet()) {
+    handYaku.push(config.honitsu.name)
+    score.han += config.honitsu.getHan()
+  }
+
+  if (config.junchan.isConditionMet()) {
+    handYaku.push(config.junchan.name)
+    score.han += config.junchan.getHan()
+  }
+
+  if (config.ryanpeikou.isConditionMet()) {
+    handYaku.push(config.ryanpeikou.name)
+    score.han += config.ryanpeikou.getHan()
+  }
+
+  if (config.chinitsu.isConditionMet()) {
+    handYaku.push(config.chinitsu.name)
+    score.han += config.chinitsu.getHan()
   }
 
   if (config.dora.isConditionMet()) {
