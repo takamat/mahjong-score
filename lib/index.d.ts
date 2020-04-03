@@ -1,5 +1,5 @@
 import { Tile } from './constants/tile';
-import { TileGroupType } from './types/tileType';
+import { TileListType } from './types/tileType';
 import { Result } from './types/resultType';
 declare type handOptionsType = {
     doraNumber?: number;
@@ -16,5 +16,5 @@ declare type handOptionsType = {
     isHaitei?: boolean;
     isHoutei?: boolean;
 };
-declare const mahjongScore: (tiles: TileGroupType, handOptions: handOptionsType) => Result;
+declare const mahjongScore: (tiles: TileListType, handOptions: handOptionsType) => Result;
 export default mahjongScore;

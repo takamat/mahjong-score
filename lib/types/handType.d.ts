@@ -1,4 +1,5 @@
-import { Tile } from './../constants/tile';
+import { Tile } from '../constants/tile';
+import { Suit } from './../constants/suit';
 export declare type HandConfigType = {
     doraNumber: number;
     akaDoraNumber: number;
@@ -13,4 +14,10 @@ export declare type HandConfigType = {
     isRinshankaihoh: boolean;
     isHaitei: boolean;
     isHoutei: boolean;
+};
+export declare type MentsuType = {
+    tile?: Tile;
+    suit: Suit;
+    number: number | null;
+    isOpen: boolean;
 };

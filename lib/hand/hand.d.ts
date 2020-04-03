@@ -1,14 +1,18 @@
-import { TileType, TileGroupType, TileGroupObjectType } from '../types/tileType';
+import { TileType } from '../types/tileType';
+import { MentsuType } from '../types/handType';
 export declare class Hand {
     tiles: TileType[];
     isCloseHand: boolean;
-    shuntsuGroups: TileGroupType[];
-    koutsuGroups: TileGroupObjectType;
-    kantsuGroups: TileGroupObjectType;
-    toitsuGroups: TileGroupObjectType;
-    koutsuKantsuGroups: TileGroupObjectType;
+    shuntsuList: MentsuType[];
+    toitsuList: MentsuType[];
+    koutsuList: MentsuType[];
+    kantsuList: MentsuType[];
+    toitsuKantsuList: MentsuType[];
+    koutsuKantsuList: MentsuType[];
+    jantou: MentsuType | null;
     constructor(tiles: TileType[]);
-    private getKoutsuGroups;
-    private getKantsuGroups;
-    private getToitsuGroups;
+    private getShuntsuList;
+    private getToitsuList;
+    private getKoutsuList;
+    private getKantsuList;
 }
