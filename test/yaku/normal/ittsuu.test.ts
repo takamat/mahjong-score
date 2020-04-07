@@ -1,9 +1,21 @@
-import mahjongScore from '../../../src/index'
-import { Tile } from '../../../src/constants/tile'
+import { Ittsuu } from './../../../src/yaku/normal/ittsuu'
+import { Tile } from './../../../src/constants/tile'
+import { Hand } from './../../../src/hand/hand'
 
 const handConfig = {
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
+  doraNumber: 0,
+  akaDoraNumber: 0,
+  uraDoraNumber: 0,
+  isTsumo: false,
+  isRiichi: false,
+  isDoubleRiichi: false,
+  isIppatsu: false,
+  isChankan: false,
+  isRinshankaihoh: false,
+  isHaitei: false,
+  isHoutei: false,
 }
 
 test('test is ittsuu (man)', () => {
@@ -23,8 +35,9 @@ test('test is ittsuu (man)', () => {
     { tile: Tile.Pin5 },
     { tile: Tile.Pin5 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('一気通貫')
+  const hand = new Hand(tiles)
+  const ittsuu = new Ittsuu(hand, handConfig)
+  expect(ittsuu.isConditionMet()).toBeTruthy()
 })
 
 test('test is ittsuu (pin)', () => {
@@ -44,8 +57,9 @@ test('test is ittsuu (pin)', () => {
     { tile: Tile.Pin5 },
     { tile: Tile.Pin5 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('一気通貫')
+  const hand = new Hand(tiles)
+  const ittsuu = new Ittsuu(hand, handConfig)
+  expect(ittsuu.isConditionMet()).toBeTruthy()
 })
 
 test('test is ittsuu (sou)', () => {
@@ -65,6 +79,7 @@ test('test is ittsuu (sou)', () => {
     { tile: Tile.Pin5 },
     { tile: Tile.Pin5 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('一気通貫')
+  const hand = new Hand(tiles)
+  const ittsuu = new Ittsuu(hand, handConfig)
+  expect(ittsuu.isConditionMet()).toBeTruthy()
 })

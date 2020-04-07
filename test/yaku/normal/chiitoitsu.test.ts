@@ -1,9 +1,21 @@
-import mahjongScore from '../../../src/index'
-import { Tile } from '../../../src/constants/tile'
+import { Chiitoitsu } from './../../../src/yaku/normal/chiitoitsu'
+import { Tile } from './../../../src/constants/tile'
+import { Hand } from './../../../src/hand/hand'
 
 const handConfig = {
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
+  doraNumber: 0,
+  akaDoraNumber: 0,
+  uraDoraNumber: 0,
+  isTsumo: false,
+  isRiichi: false,
+  isDoubleRiichi: false,
+  isIppatsu: false,
+  isChankan: false,
+  isRinshankaihoh: false,
+  isHaitei: false,
+  isHoutei: false,
 }
 
 test('test is chiitoitsu', () => {
@@ -23,8 +35,9 @@ test('test is chiitoitsu', () => {
     { tile: Tile.Ton, isWinTile: true },
     { tile: Tile.Ton },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('七対子')
+  const hand = new Hand(tiles)
+  const chiitoitsu = new Chiitoitsu(hand, handConfig)
+  expect(chiitoitsu.isConditionMet()).toBeTruthy()
 })
 
 test('test is chiitoitsu (kantsu)', () => {
@@ -44,6 +57,7 @@ test('test is chiitoitsu (kantsu)', () => {
     { tile: Tile.Ton, isWinTile: true },
     { tile: Tile.Ton },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).not.toContain('七対子')
+  const hand = new Hand(tiles)
+  const chiitoitsu = new Chiitoitsu(hand, handConfig)
+  expect(chiitoitsu.isConditionMet()).toBeFalsy()
 })

@@ -1,9 +1,21 @@
-import mahjongScore from '../../../src/index'
-import { Tile } from '../../../src/constants/tile'
+import { SanAnkou } from './../../../src/yaku/normal/sanAnkou'
+import { Tile } from './../../../src/constants/tile'
+import { Hand } from './../../../src/hand/hand'
 
 const handConfig = {
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
+  doraNumber: 0,
+  akaDoraNumber: 0,
+  uraDoraNumber: 0,
+  isTsumo: false,
+  isRiichi: false,
+  isDoubleRiichi: false,
+  isIppatsu: false,
+  isChankan: false,
+  isRinshankaihoh: false,
+  isHaitei: false,
+  isHoutei: false,
 }
 
 test('test is san ankou', () => {
@@ -24,8 +36,9 @@ test('test is san ankou', () => {
     { tile: Tile.Pin4 },
     { tile: Tile.Pin5 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('三暗刻')
+  const hand = new Hand(tiles)
+  const sanAnkou = new SanAnkou(hand, handConfig)
+  expect(sanAnkou.isConditionMet()).toBeTruthy()
 })
 
 test('test is san ankou (open)', () => {
@@ -45,6 +58,7 @@ test('test is san ankou (open)', () => {
     { tile: Tile.Pin4 },
     { tile: Tile.Pin5 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).not.toContain('三暗刻')
+  const hand = new Hand(tiles)
+  const sanAnkou = new SanAnkou(hand, handConfig)
+  expect(sanAnkou.isConditionMet()).toBeFalsy()
 })
