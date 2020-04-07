@@ -1,5 +1,5 @@
-import { Dora } from './../../../src/yaku/normal/dora'
-import { Tile } from '../../../src/constants/tile'
+import { Tsumo } from './../../../src/yaku/normal/tsumo'
+import { Tile } from './../../../src/constants/tile'
 import { Hand } from './../../../src/hand/hand'
 
 const tiles = [
@@ -20,14 +20,14 @@ const tiles = [
   { tile: Tile.Pei },
 ]
 
-test('test is dora', () => {
+test('test is tsumo', () => {
   const handConfig = {
     baKaze: Tile.Ton,
     jiKaze: Tile.Nan,
-    doraNumber: 1,
+    doraNumber: 0,
     akaDoraNumber: 0,
     uraDoraNumber: 0,
-    isTsumo: false,
+    isTsumo: true,
     isRiichi: false,
     isDoubleRiichi: false,
     isIppatsu: false,
@@ -37,6 +37,6 @@ test('test is dora', () => {
     isHoutei: false,
   }
   const hand = new Hand(tiles)
-  const dora = new Dora(hand, handConfig)
-  expect(dora.isConditionMet()).toBeTruthy()
+  const tsumo = new Tsumo(hand, handConfig)
+  expect(tsumo.isConditionMet()).toBeTruthy()
 })

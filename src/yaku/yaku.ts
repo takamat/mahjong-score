@@ -1,4 +1,5 @@
 import { HandConfigType } from '../types/handType'
+import { YakuType } from '../types/yakuType'
 import { Hand } from './../hand/hand'
 
 export abstract class Yaku {
@@ -18,6 +19,14 @@ export abstract class Yaku {
   getHan(): number {
     const han = this.hand.isCloseHand ? this.hanClose : this.hanOpen
     return han ?? 0
+  }
+
+  getYakuData(): YakuType {
+    return {
+      name: this.name,
+      han: this.getHan(),
+      isYakuman: this.isYakuman,
+    }
   }
 
   abstract isConditionMet(): boolean

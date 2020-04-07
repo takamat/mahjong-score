@@ -1,9 +1,21 @@
-import mahjongScore from '../../../src/index'
-import { Tile } from '../../../src/constants/tile'
+import { Toitoi } from './../../../src/yaku/normal/toitoi'
+import { Tile } from './../../../src/constants/tile'
+import { Hand } from './../../../src/hand/hand'
 
 const handConfig = {
   baKaze: Tile.Ton,
   jiKaze: Tile.Nan,
+  doraNumber: 0,
+  akaDoraNumber: 0,
+  uraDoraNumber: 0,
+  isTsumo: false,
+  isRiichi: false,
+  isDoubleRiichi: false,
+  isIppatsu: false,
+  isChankan: false,
+  isRinshankaihoh: false,
+  isHaitei: false,
+  isHoutei: false,
 }
 
 test('test is toitoi (closed)', () => {
@@ -24,8 +36,9 @@ test('test is toitoi (closed)', () => {
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('対々和')
+  const hand = new Hand(tiles)
+  const toitoi = new Toitoi(hand, handConfig)
+  expect(toitoi.isConditionMet()).toBeTruthy()
 })
 
 test('test is toitoi (open)', () => {
@@ -45,6 +58,7 @@ test('test is toitoi (open)', () => {
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
   ]
-  const result = mahjongScore(tiles, handConfig)
-  expect(result.yaku).toContain('対々和')
+  const hand = new Hand(tiles)
+  const toitoi = new Toitoi(hand, handConfig)
+  expect(toitoi.isConditionMet()).toBeTruthy()
 })
