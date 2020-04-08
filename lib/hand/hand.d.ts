@@ -9,6 +9,7 @@ export declare class Hand {
     kantsuList: MentsuType[];
     toitsuKantsuList: MentsuType[];
     koutsuKantsuList: MentsuType[];
+    mentsuList: MentsuType[];
     jantou: MentsuType | null;
     constructor(tiles: TileType[]);
     private getShuntsuList;

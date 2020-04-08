@@ -13,6 +13,7 @@ export class Hand {
   kantsuList: MentsuType[] = []
   toitsuKantsuList: MentsuType[] = []
   koutsuKantsuList: MentsuType[] = []
+  mentsuList: MentsuType[] = []
   jantou: MentsuType | null = null
 
   constructor(tiles: TileType[]) {
@@ -32,6 +33,7 @@ export class Hand {
     this.kantsuList = this.getKantsuList(groups)
     this.toitsuKantsuList = this.toitsuList.concat(this.kantsuList)
     this.koutsuKantsuList = this.koutsuList.concat(this.kantsuList)
+    this.mentsuList = this.koutsuKantsuList.concat(this.shuntsuList)
 
     // TODO: WIP
     if (this.toitsuList.length === 1) {
