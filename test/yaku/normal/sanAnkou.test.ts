@@ -20,6 +20,8 @@ const handConfig = {
 
 test('test is san ankou', () => {
   const tiles = [
+    { tile: Tile.Sou8 },
+    { tile: Tile.Sou8 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -30,19 +32,19 @@ test('test is san ankou', () => {
     { tile: Tile.Man7 },
     { tile: Tile.Man7 },
     { tile: Tile.Man7, isWinTile: true },
-    { tile: Tile.Sou8 },
-    { tile: Tile.Sou8 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin4 },
     { tile: Tile.Pin5 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const sanAnkou = new SanAnkou(hand, handConfig)
   expect(sanAnkou.isConditionMet()).toBeTruthy()
 })
 
 test('test is san ankou (open)', () => {
   const tiles = [
+    { tile: Tile.Sou8 },
+    { tile: Tile.Sou8 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -52,13 +54,11 @@ test('test is san ankou (open)', () => {
     { tile: Tile.Man9 },
     { tile: Tile.Man9, isOpen: true },
     { tile: Tile.Man9, isWinTile: true },
-    { tile: Tile.Sou8 },
-    { tile: Tile.Sou8 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin4 },
     { tile: Tile.Pin5 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const sanAnkou = new SanAnkou(hand, handConfig)
   expect(sanAnkou.isConditionMet()).toBeFalsy()
 })

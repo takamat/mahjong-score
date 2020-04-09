@@ -16,18 +16,17 @@ export class Hand {
   mentsuList: MentsuType[] = []
   jantou: MentsuType | null = null
 
-  constructor(tiles: TileType[]) {
-    const orderRule = Object.values(Tile)
-    const groups = groupBy(tiles, 'tile')
-
+  constructor(tiles: TileType[], juntou: [number, number]) {
     this.tiles = tiles
-      .slice()
-      .sort(
-        (a: TileType, b: TileType) =>
-          orderRule.indexOf(a.tile) - orderRule.indexOf(b.tile),
-      )
+
+    const copiedTiles = tiles.slice()
+    const choseJantou = copiedTiles.splice(juntou[1], 1)
+    choseJantou.concat(copiedTiles.splice(juntou[0], 1))
+    this.jantou = getToitsu(choseJantou)
+
+    const groups = groupBy(copiedTiles, 'tile')
     this.isCloseHand = tiles.findIndex(tile => tile.isOpen) >= 0
-    this.shuntsuList = this.getShuntsuList(tiles)
+    this.shuntsuList = this.getShuntsuList(copiedTiles)
     this.toitsuList = this.getToitsuList(groups)
     this.koutsuList = this.getKoutsuList(groups)
     this.kantsuList = this.getKantsuList(groups)

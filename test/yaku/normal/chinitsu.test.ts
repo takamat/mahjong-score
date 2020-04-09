@@ -20,6 +20,8 @@ const handConfig = {
 
 test('test is chinitsu', () => {
   const tiles = [
+    { tile: Tile.Man9, isWinTile: true },
+    { tile: Tile.Man9 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -32,10 +34,8 @@ test('test is chinitsu', () => {
     { tile: Tile.Man6 },
     { tile: Tile.Man7 },
     { tile: Tile.Man8 },
-    { tile: Tile.Man9, isWinTile: true },
-    { tile: Tile.Man9 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const chinitsu = new Chinitsu(hand, handConfig)
   expect(chinitsu.isConditionMet()).toBeTruthy()
 })

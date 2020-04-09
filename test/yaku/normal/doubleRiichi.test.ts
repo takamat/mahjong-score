@@ -3,6 +3,8 @@ import { Tile } from './../../../src/constants/tile'
 import { Hand } from './../../../src/hand/hand'
 
 const tiles = [
+  { tile: Tile.Sou1 },
+  { tile: Tile.Sou1 },
   { tile: Tile.Man1 },
   { tile: Tile.Man1 },
   { tile: Tile.Man1 },
@@ -12,8 +14,6 @@ const tiles = [
   { tile: Tile.Pin7 },
   { tile: Tile.Pin7 },
   { tile: Tile.Pin7 },
-  { tile: Tile.Sou1 },
-  { tile: Tile.Sou1 },
   { tile: Tile.Ton },
   { tile: Tile.Ton, isWinTile: true },
   { tile: Tile.Ton },
@@ -36,7 +36,7 @@ test('test is double riichi', () => {
     isHaitei: false,
     isHoutei: false,
   }
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const doubleRiichi = new DoubleRiichi(hand, handConfig)
   expect(doubleRiichi.isConditionMet()).toBeTruthy()
 })

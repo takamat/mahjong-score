@@ -1,3 +1,4 @@
+import { sortTiles, chooseJuntouCandidates } from './utils'
 import { Tile } from './constants/tile'
 import { Hand } from './hand/hand'
 import { judgeYaku } from './yaku/judgeYaku'
@@ -41,7 +42,9 @@ const mahjongScore = (
     },
     handOptions,
   )
-  const hand = new Hand(tiles)
+  const sortedTiles = sortTiles(tiles)
+  const juntouCandidates = chooseJuntouCandidates(sortedTiles)
+  const hand = new Hand(sortedTiles, juntouCandidates[0])
   const yakuList = judgeYaku(hand, handConfig)
 
   return calcScore(yakuList, handConfig)

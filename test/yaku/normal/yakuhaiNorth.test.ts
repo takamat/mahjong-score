@@ -20,6 +20,8 @@ const handConfig = {
 
 test('test is yakuhai pei', () => {
   const tiles = [
+    { tile: Tile.Sou1 },
+    { tile: Tile.Sou1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -29,14 +31,12 @@ test('test is yakuhai pei', () => {
     { tile: Tile.Pin7 },
     { tile: Tile.Pin7 },
     { tile: Tile.Pin7 },
-    { tile: Tile.Sou1 },
-    { tile: Tile.Sou1 },
     { tile: Tile.Pei },
     { tile: Tile.Pei, isWinTile: true },
     { tile: Tile.Pei },
     { tile: Tile.Ton },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const yakuhaiNorth = new YakuhaiNorth(hand, handConfig)
   expect(yakuhaiNorth.isConditionMet()).toBeTruthy()
 })

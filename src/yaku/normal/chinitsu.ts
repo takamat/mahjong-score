@@ -11,10 +11,6 @@ export class Chinitsu extends Yaku {
   isConditionMet(): boolean {
     const suits = this.hand.mentsuList.map(mentsu => mentsu.suit)
 
-    console.log(suits)
-    console.log(suits.every(suit => Suit.Man))
-    console.log(this.hand.jantou)
-
     if (suits.every(suit => Suit.Man) && this.hand.jantou?.suit === Suit.Man) {
       return true
     }

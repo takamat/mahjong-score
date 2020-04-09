@@ -20,6 +20,8 @@ const handConfig = {
 
 test('test is toitoi (closed)', () => {
   const tiles = [
+    { tile: Tile.Sou8 },
+    { tile: Tile.Sou8 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -30,19 +32,19 @@ test('test is toitoi (closed)', () => {
     { tile: Tile.Man7 },
     { tile: Tile.Man7 },
     { tile: Tile.Man7, isWinTile: true },
-    { tile: Tile.Sou8 },
-    { tile: Tile.Sou8 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const toitoi = new Toitoi(hand, handConfig)
   expect(toitoi.isConditionMet()).toBeTruthy()
 })
 
 test('test is toitoi (open)', () => {
   const tiles = [
+    { tile: Tile.Sou8 },
+    { tile: Tile.Sou8 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
     { tile: Tile.Man1 },
@@ -52,13 +54,11 @@ test('test is toitoi (open)', () => {
     { tile: Tile.Man9 },
     { tile: Tile.Man9, isOpen: true },
     { tile: Tile.Man9, isWinTile: true },
-    { tile: Tile.Sou8 },
-    { tile: Tile.Sou8 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
     { tile: Tile.Pin3 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const toitoi = new Toitoi(hand, handConfig)
   expect(toitoi.isConditionMet()).toBeTruthy()
 })

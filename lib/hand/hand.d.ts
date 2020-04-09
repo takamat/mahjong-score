@@ -11,7 +11,7 @@ export declare class Hand {
     koutsuKantsuList: MentsuType[];
     mentsuList: MentsuType[];
     jantou: MentsuType | null;
-    constructor(tiles: TileType[]);
+    constructor(tiles: TileType[], juntou: [number, number]);
     private getShuntsuList;
     private getToitsuList;
     private getKoutsuList;
