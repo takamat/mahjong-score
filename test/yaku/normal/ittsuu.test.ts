@@ -20,6 +20,8 @@ const handConfig = {
 
 test('test is ittsuu (man)', () => {
   const tiles = [
+    { tile: Tile.Pin5 },
+    { tile: Tile.Pin5 },
     { tile: Tile.Man1 },
     { tile: Tile.Man2 },
     { tile: Tile.Man3 },
@@ -32,16 +34,16 @@ test('test is ittsuu (man)', () => {
     { tile: Tile.Sou7, isWinTile: true },
     { tile: Tile.Sou8 },
     { tile: Tile.Sou9 },
-    { tile: Tile.Pin5 },
-    { tile: Tile.Pin5 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const ittsuu = new Ittsuu(hand, handConfig)
   expect(ittsuu.isConditionMet()).toBeTruthy()
 })
 
 test('test is ittsuu (pin)', () => {
   const tiles = [
+    { tile: Tile.Pin5 },
+    { tile: Tile.Pin5 },
     { tile: Tile.Pin1 },
     { tile: Tile.Pin2 },
     { tile: Tile.Pin3 },
@@ -54,16 +56,16 @@ test('test is ittsuu (pin)', () => {
     { tile: Tile.Sou7, isWinTile: true },
     { tile: Tile.Sou8 },
     { tile: Tile.Sou9 },
-    { tile: Tile.Pin5 },
-    { tile: Tile.Pin5 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const ittsuu = new Ittsuu(hand, handConfig)
   expect(ittsuu.isConditionMet()).toBeTruthy()
 })
 
 test('test is ittsuu (sou)', () => {
   const tiles = [
+    { tile: Tile.Pin5 },
+    { tile: Tile.Pin5 },
     { tile: Tile.Sou1 },
     { tile: Tile.Sou2 },
     { tile: Tile.Sou3 },
@@ -76,10 +78,8 @@ test('test is ittsuu (sou)', () => {
     { tile: Tile.Sou7, isWinTile: true },
     { tile: Tile.Sou8 },
     { tile: Tile.Sou9 },
-    { tile: Tile.Pin5 },
-    { tile: Tile.Pin5 },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const ittsuu = new Ittsuu(hand, handConfig)
   expect(ittsuu.isConditionMet()).toBeTruthy()
 })

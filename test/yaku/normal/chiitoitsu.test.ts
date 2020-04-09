@@ -35,7 +35,7 @@ test('test is chiitoitsu', () => {
     { tile: Tile.Ton, isWinTile: true },
     { tile: Tile.Ton },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const chiitoitsu = new Chiitoitsu(hand, handConfig)
   expect(chiitoitsu.isConditionMet()).toBeTruthy()
 })
@@ -57,7 +57,7 @@ test('test is chiitoitsu (kantsu)', () => {
     { tile: Tile.Ton, isWinTile: true },
     { tile: Tile.Ton },
   ]
-  const hand = new Hand(tiles)
+  const hand = new Hand(tiles, [0, 1])
   const chiitoitsu = new Chiitoitsu(hand, handConfig)
   expect(chiitoitsu.isConditionMet()).toBeFalsy()
 })
